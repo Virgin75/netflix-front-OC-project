@@ -1,63 +1,40 @@
 <html>
   <head>
-    <script src="index.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <img alt="logo" href="#" />
-      <span>Accueil</span>
-      <span>Action</span>
-      <span>Animation</span>
-      <span>Famille</span>
+      <span class="menu-item">Accueil</span>
+      <span class="menu-item">Action</span>
+      <span class="menu-item">Animation</span>
+      <span class="menu-item">Famille</span>
     </header>
     <section id="featured-movie">
       <img src="#" width="100%" height="350px" />
     </section>
     <section id="top-movies">
+      <h2>Films les mieux notés</h2>
       <div class="container">
-        <img
-          src="images/bhutan1.jpg"
-          width="325px"
-          height="150px"
-          alt="Bhutan"
-        />
-        <img
-          src="images/bhutan1.jpg"
-          width="325px"
-          height="150px"
-          alt="Bhutan"
-        />
-        <img
-          src="images/bhutan1.jpg"
-          width="325px"
-          height="150px"
-          alt="Bhutan"
-        />
-        <img
-          src="images/bhutan1.jpg"
-          width="325px"
-          height="150px"
-          alt="Bhutan"
-        />
-        <img
-          src="images/bhutan1.jpg"
-          width="325px"
-          height="150px"
-          alt="Bhutan"
-        />
-        <img
-          src="images/bhutan1.jpg"
-          width="325px"
-          height="150px"
-          alt="Bhutan"
-        />
-        <img
-          src="images/bhutan1.jpg"
-          width="325px"
-          height="150px"
-          alt="Bhutan"
-        />
+        <div class="arrow">
+          <button id="swipe-left-top7">
+            <img src="img/arrow-left.png" width="38" height="50" />
+          </button>
+        </div>
+        <div class="scrollable-container" id="top7-scrollable">
+          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie1-top7" />
+          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie2-top7" />
+          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie3-top7" />
+          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie4-top7" />
+          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie5-top7" />
+          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie6-top7" />
+          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie7-top7" />
+        </div>
+        <div class="arrow">
+          <button id="swipe-right-top7">
+            <img src="img/arrow-right.png" width="38" height="50" />
+          </button>
+        </div>
       </div>
     </section>
     <h1
@@ -66,6 +43,7 @@
       id="title"
     ></h1>
     <h2 id="movie1"></h2>
+    <script src="index.js"></script>
   </body>
   <footer>FOOTER</footer>
 </html>

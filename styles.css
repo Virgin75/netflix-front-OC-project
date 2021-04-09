@@ -2,9 +2,51 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 33px;
+}
+
+.menu-item {
+  font-size: 1.5em;
+  margin-left: 22px;
+}
+
+.scrollable-container {
+  display: flex;
+  overflow-x: auto;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
-  overflow-x: auto;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+.scrollable-container > img {
+  margin: 5px;
+  object-fit: cover;
+  min-width: 310px;
+}
+
+body {
+  background-color: #0d1117;
+  color: white;
+  margin-top: 33px;
+  margin-bottom: 33px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+button {
+  display: flex;
+  background-color: #ffffff00;
+  border: none;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
 }

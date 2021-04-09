@@ -85,7 +85,34 @@ fetchBestMovie().then((movies) => {
   titre.setAttribute('movie-id', bestMovie.id)
 })
 
-fetch7BestFamilyMovies().then((movies) => {
-  let movie1 = document.getElementById('movie1')
-  movie1.innerText = movies[2].title
+fetchFollowing7BestMovies().then((movies) => {
+  let movie1 = document.getElementById('movie1-top7')
+  let movie2 = document.getElementById('movie2-top7')
+  let movie3 = document.getElementById('movie3-top7')
+  let movie4 = document.getElementById('movie4-top7')
+  let movie5 = document.getElementById('movie5-top7')
+  let movie6 = document.getElementById('movie6-top7')
+  let movie7 = document.getElementById('movie7-top7')
+  movie1.src = movies[0].image_url
+  movie2.src = movies[1].image_url
+  movie3.src = movies[2].image_url
+  movie4.src = movies[3].image_url
+  movie5.src = movies[4].image_url
+  movie6.src = movies[5].image_url
+  movie7.src = movies[6].image_url
+})
+
+const rightBtnTop7 = document.getElementById('swipe-right-top7')
+const leftBtnTop7 = document.getElementById('swipe-left-top7')
+
+rightBtnTop7.addEventListener('click', function (event) {
+  const conent = document.getElementById('top7-scrollable')
+  conent.scrollLeft += 300
+  event.preventDefault()
+})
+
+leftBtnTop7.addEventListener('click', function (event) {
+  const conent = document.getElementById('top7-scrollable')
+  conent.scrollLeft -= 300
+  event.preventDefault()
 })
