@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  overflow-x: auto;
+}
