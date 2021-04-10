@@ -22,13 +22,55 @@
           </button>
         </div>
         <div class="scrollable-container" id="top7-scrollable">
-          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie1-top7" />
-          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie2-top7" />
-          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie3-top7" />
-          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie4-top7" />
-          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie5-top7" />
-          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie6-top7" />
-          <img src="images/bhutan1.jpg" alt="Bhutan" id="movie7-top7" />
+          <img
+            src="images/bhutan1.jpg"
+            alt="Bhutan"
+            onclick="getMovieDetails(this.getAttribute('movie-id'))"
+            movie-id=""
+            id="movie1-top7"
+          />
+          <img
+            src="images/bhutan1.jpg"
+            alt="Bhutan"
+            onclick="getMovieDetails(this.getAttribute('movie-id'))"
+            movie-id=""
+            id="movie2-top7"
+          />
+          <img
+            src="images/bhutan1.jpg"
+            alt="Bhutan"
+            onclick="getMovieDetails(this.getAttribute('movie-id'))"
+            movie-id=""
+            id="movie3-top7"
+          />
+          <img
+            src="images/bhutan1.jpg"
+            alt="Bhutan"
+            onclick="getMovieDetails(this.getAttribute('movie-id'))"
+            movie-id=""
+            id="movie4-top7"
+          />
+          <img
+            src="images/bhutan1.jpg"
+            alt="Bhutan"
+            onclick="getMovieDetails(this.getAttribute('movie-id'))"
+            movie-id=""
+            id="movie5-top7"
+          />
+          <img
+            src="images/bhutan1.jpg"
+            alt="Bhutan"
+            onclick="getMovieDetails(this.getAttribute('movie-id'))"
+            movie-id=""
+            id="movie6-top7"
+          />
+          <img
+            src="images/bhutan1.jpg"
+            alt="Bhutan"
+            onclick="getMovieDetails(this.getAttribute('movie-id'))"
+            movie-id=""
+            id="movie7-top7"
+          />
         </div>
         <div class="arrow">
           <button id="swipe-right-top7">
@@ -37,12 +79,12 @@
         </div>
       </div>
     </section>
-    <h1
-      onclick="getMovieDetails(this.getAttribute('movie-id'))"
-      movie-id=""
-      id="title"
-    ></h1>
-    <h2 id="movie1"></h2>
+
+    <div class="modal invisible" id="modal">
+      <img src="#" id="close-modal" />
+      <h2 class="black" id="focus-title">TItle</h2>
+    </div>
+    <button id="open-modal">Open modal</button>
     <script src="index.js"></script>
   </body>
   <footer>FOOTER</footer>

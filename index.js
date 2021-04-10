@@ -75,14 +75,19 @@ function getMovieDetails(id) {
   console.log(id)
   fetchMovieDetails(id).then((movie) => {
     console.log(movie)
+    // On ouvre le modal
+    const modal = document.getElementById('modal')
+    modal.setAttribute('class', 'modal visible')
+    const title = document.getElementById('focus-title')
+    title.innerText = movie.title
   })
 }
 
 fetchBestMovie().then((movies) => {
   let bestMovie = movies[0]
   let titre = document.getElementById('title')
-  titre.innerText = bestMovie.title
-  titre.setAttribute('movie-id', bestMovie.id)
+  //titre.innerText = bestMovie.title
+  //titre.setAttribute('movie-id', bestMovie.id)
 })
 
 fetchFollowing7BestMovies().then((movies) => {
@@ -100,6 +105,13 @@ fetchFollowing7BestMovies().then((movies) => {
   movie5.src = movies[4].image_url
   movie6.src = movies[5].image_url
   movie7.src = movies[6].image_url
+  movie1.setAttribute('movie-id', movies[0].id)
+  movie2.setAttribute('movie-id', movies[1].id)
+  movie3.setAttribute('movie-id', movies[2].id)
+  movie4.setAttribute('movie-id', movies[3].id)
+  movie5.setAttribute('movie-id', movies[4].id)
+  movie6.setAttribute('movie-id', movies[5].id)
+  movie7.setAttribute('movie-id', movies[6].id)
 })
 
 const rightBtnTop7 = document.getElementById('swipe-right-top7')
@@ -115,4 +127,16 @@ leftBtnTop7.addEventListener('click', function (event) {
   const conent = document.getElementById('top7-scrollable')
   conent.scrollLeft -= 300
   event.preventDefault()
+})
+
+const modalBtn = document.getElementById('open-modal')
+modalBtn.addEventListener('click', function (event) {
+  const modal = document.getElementById('modal')
+  modal.setAttribute('class', 'modal visible')
+})
+
+const closeModalBtn = document.getElementById('close-modal')
+closeModalBtn.addEventListener('click', function (event) {
+  const modal = document.getElementById('modal')
+  modal.setAttribute('class', 'modal invisible')
 })
