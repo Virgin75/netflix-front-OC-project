@@ -134,12 +134,19 @@ fetchFollowing7BestMovies().then((movies) => {
   let movie6 = document.getElementById('movie6-top7')
   let movie7 = document.getElementById('movie7-top7')
   movie1.src = movies[0].image_url
+  movie1.alt = 'Cover picture of movie: ' + movies[0].title
   movie2.src = movies[1].image_url
+  movie2.alt = 'Cover picture of movie: ' + movies[1].title
   movie3.src = movies[2].image_url
+  movie3.alt = 'Cover picture of movie: ' + movies[2].title
   movie4.src = movies[3].image_url
+  movie4.alt = 'Cover picture of movie: ' + movies[3].title
   movie5.src = movies[4].image_url
+  movie5.alt = 'Cover picture of movie: ' + movies[4].title
   movie6.src = movies[5].image_url
+  movie6.alt = 'Cover picture of movie: ' + movies[5].title
   movie7.src = movies[6].image_url
+  movie7.alt = 'Cover picture of movie: ' + movies[6].title
   movie1.setAttribute('movie-id', movies[0].id)
   movie2.setAttribute('movie-id', movies[1].id)
   movie3.setAttribute('movie-id', movies[2].id)
@@ -149,6 +156,100 @@ fetchFollowing7BestMovies().then((movies) => {
   movie7.setAttribute('movie-id', movies[6].id)
 })
 
+fetch7BestActionMovies().then((movies) => {
+  let movie1 = document.getElementById('movie1-action')
+  let movie2 = document.getElementById('movie2-action')
+  let movie3 = document.getElementById('movie3-action')
+  let movie4 = document.getElementById('movie4-action')
+  let movie5 = document.getElementById('movie5-action')
+  let movie6 = document.getElementById('movie6-action')
+  let movie7 = document.getElementById('movie7-action')
+  movie1.src = movies[0].image_url
+  movie1.alt = 'Cover picture of movie: ' + movies[0].title
+  movie2.src = movies[1].image_url
+  movie2.alt = 'Cover picture of movie: ' + movies[1].title
+  movie3.src = movies[2].image_url
+  movie3.alt = 'Cover picture of movie: ' + movies[2].title
+  movie4.src = movies[3].image_url
+  movie4.alt = 'Cover picture of movie: ' + movies[3].title
+  movie5.src = movies[4].image_url
+  movie5.alt = 'Cover picture of movie: ' + movies[4].title
+  movie6.src = movies[5].image_url
+  movie6.alt = 'Cover picture of movie: ' + movies[5].title
+  movie7.src = movies[6].image_url
+  movie7.alt = 'Cover picture of movie: ' + movies[6].title
+  movie1.setAttribute('movie-id', movies[0].id)
+  movie2.setAttribute('movie-id', movies[1].id)
+  movie3.setAttribute('movie-id', movies[2].id)
+  movie4.setAttribute('movie-id', movies[3].id)
+  movie5.setAttribute('movie-id', movies[4].id)
+  movie6.setAttribute('movie-id', movies[5].id)
+  movie7.setAttribute('movie-id', movies[6].id)
+})
+
+fetch7BestAnimationMovies().then((movies) => {
+  let movie1 = document.getElementById('movie1-animation')
+  let movie2 = document.getElementById('movie2-animation')
+  let movie3 = document.getElementById('movie3-animation')
+  let movie4 = document.getElementById('movie4-animation')
+  let movie5 = document.getElementById('movie5-animation')
+  let movie6 = document.getElementById('movie6-animation')
+  let movie7 = document.getElementById('movie7-animation')
+  movie1.src = movies[0].image_url
+  movie1.alt = 'Cover picture of movie: ' + movies[0].title
+  movie2.src = movies[1].image_url
+  movie2.alt = 'Cover picture of movie: ' + movies[1].title
+  movie3.src = movies[2].image_url
+  movie3.alt = 'Cover picture of movie: ' + movies[2].title
+  movie4.src = movies[3].image_url
+  movie4.alt = 'Cover picture of movie: ' + movies[3].title
+  movie5.src = movies[4].image_url
+  movie5.alt = 'Cover picture of movie: ' + movies[4].title
+  movie6.src = movies[5].image_url
+  movie6.alt = 'Cover picture of movie: ' + movies[5].title
+  movie7.src = movies[6].image_url
+  movie7.alt = 'Cover picture of movie: ' + movies[6].title
+  movie1.setAttribute('movie-id', movies[0].id)
+  movie2.setAttribute('movie-id', movies[1].id)
+  movie3.setAttribute('movie-id', movies[2].id)
+  movie4.setAttribute('movie-id', movies[3].id)
+  movie5.setAttribute('movie-id', movies[4].id)
+  movie6.setAttribute('movie-id', movies[5].id)
+  movie7.setAttribute('movie-id', movies[6].id)
+})
+
+fetch7BestFamilyMovies().then((movies) => {
+  let movie1 = document.getElementById('movie1-family')
+  let movie2 = document.getElementById('movie2-family')
+  let movie3 = document.getElementById('movie3-family')
+  let movie4 = document.getElementById('movie4-family')
+  let movie5 = document.getElementById('movie5-family')
+  let movie6 = document.getElementById('movie6-family')
+  let movie7 = document.getElementById('movie7-family')
+  movie1.src = movies[0].image_url
+  movie1.alt = 'Cover picture of movie: ' + movies[0].title
+  movie2.src = movies[1].image_url
+  movie2.alt = 'Cover picture of movie: ' + movies[1].title
+  movie3.src = movies[2].image_url
+  movie3.alt = 'Cover picture of movie: ' + movies[2].title
+  movie4.src = movies[3].image_url
+  movie4.alt = 'Cover picture of movie: ' + movies[3].title
+  movie5.src = movies[4].image_url
+  movie5.alt = 'Cover picture of movie: ' + movies[4].title
+  movie6.src = movies[5].image_url
+  movie6.alt = 'Cover picture of movie: ' + movies[5].title
+  movie7.src = movies[6].image_url
+  movie7.alt = 'Cover picture of movie: ' + movies[6].title
+  movie1.setAttribute('movie-id', movies[0].id)
+  movie2.setAttribute('movie-id', movies[1].id)
+  movie3.setAttribute('movie-id', movies[2].id)
+  movie4.setAttribute('movie-id', movies[3].id)
+  movie5.setAttribute('movie-id', movies[4].id)
+  movie6.setAttribute('movie-id', movies[5].id)
+  movie7.setAttribute('movie-id', movies[6].id)
+})
+
+//Boutons suivant et précédent section TOP7
 const rightBtnTop7 = document.getElementById('swipe-right-top7')
 const leftBtnTop7 = document.getElementById('swipe-left-top7')
 
@@ -164,6 +265,55 @@ leftBtnTop7.addEventListener('click', function (event) {
   event.preventDefault()
 })
 
+//Boutons suivant et précédent section ACTION
+const rightBtnAction = document.getElementById('swipe-right-action')
+const leftBtnAction = document.getElementById('swipe-left-action')
+
+rightBtnAction.addEventListener('click', function (event) {
+  const conent = document.getElementById('action-scrollable')
+  conent.scrollLeft += 300
+  event.preventDefault()
+})
+
+leftBtnAction.addEventListener('click', function (event) {
+  const conent = document.getElementById('action-scrollable')
+  conent.scrollLeft -= 300
+  event.preventDefault()
+})
+
+//Boutons suivant et précédent section ANIMATION
+const rightBtnAnimation = document.getElementById('swipe-right-animation')
+const leftBtnAnimation = document.getElementById('swipe-left-animation')
+
+rightBtnAnimation.addEventListener('click', function (event) {
+  const conent = document.getElementById('animation-scrollable')
+  conent.scrollLeft += 300
+  event.preventDefault()
+})
+
+leftBtnAnimation.addEventListener('click', function (event) {
+  const conent = document.getElementById('animation-scrollable')
+  conent.scrollLeft -= 300
+  event.preventDefault()
+})
+
+//Boutons suivant et précédent section FAMILY
+const rightBtnFamily = document.getElementById('swipe-right-family')
+const leftBtnFamily = document.getElementById('swipe-left-family')
+
+rightBtnFamily.addEventListener('click', function (event) {
+  const conent = document.getElementById('family-scrollable')
+  conent.scrollLeft += 300
+  event.preventDefault()
+})
+
+leftBtnFamily.addEventListener('click', function (event) {
+  const conent = document.getElementById('family-scrollable')
+  conent.scrollLeft -= 300
+  event.preventDefault()
+})
+
+// Fermeture du modal
 const closeModalBtn = document.getElementById('close-modal')
 closeModalBtn.addEventListener('click', function (event) {
   const modal = document.getElementById('modal')

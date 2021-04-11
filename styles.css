@@ -30,9 +30,12 @@ h2 {
   margin: 5px;
   object-fit: cover;
   min-width: 300px;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
 body {
+  font-family: 'system-ui';
   background-color: #0d1117;
   color: white;
   margin-top: 33px;
@@ -49,6 +52,7 @@ button {
   display: flex;
   background-color: #ffffff00;
   border: none;
+  cursor: pointer;
 }
 
 .arrow {
@@ -82,19 +86,27 @@ button {
   flex-direction: row;
   margin-top: 80px;
   padding: 33px;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+
+.modal-content > img {
+  border-radius: 8px;
+  margin-right: 22px;
+  margin-bottom: 22px;
 }
 
 .right-container {
-  padding-right: 22px;
-  padding-left: 22px;
   display: flex;
   flex-direction: column;
+  max-width: 450px;
 }
 .right-container > span {
   color: black;
 }
 .right-container > h2 {
   text-align: left;
+  margin: 4px;
 }
 
 .invisible {
@@ -115,6 +127,7 @@ button {
 
 .closebtn {
   position: absolute;
+  cursor: pointer;
   top: 22;
   left: 22;
 }
@@ -153,4 +166,17 @@ button {
   width: 100vw;
   height: 100vh;
   top: 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 70px;
+}
+
+section {
+  margin-top: 70px;
+}
+
+h1 {
+  font-size: 3em;
 }
