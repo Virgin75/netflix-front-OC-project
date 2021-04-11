@@ -1,6 +1,7 @@
 header {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   margin-bottom: 33px;
 }
@@ -40,6 +41,10 @@ body {
   margin-right: 50px;
 }
 
+#features-movie {
+  display: flex;
+}
+
 button {
   display: flex;
   background-color: #ffffff00;
@@ -57,7 +62,7 @@ button {
   flex-direction: column;
   background-color: white;
   width: 66vw;
-  height: 75vh;
+  height: 80vh;
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
@@ -66,11 +71,30 @@ button {
   top: 0;
   bottom: 0;
   right: 0;
-  text-align: center;
   border-radius: 8px;
   box-shadow: 12px 10px 68px -13px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 12px 10px 68px -13px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 12px 10px 68px -13px rgba(0, 0, 0, 0.75);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;
+  padding: 33px;
+}
+
+.right-container {
+  padding-right: 22px;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+}
+.right-container > span {
+  color: black;
+}
+.right-container > h2 {
+  text-align: left;
 }
 
 .invisible {
@@ -83,4 +107,50 @@ button {
 
 .black {
   color: black;
+}
+
+.margin {
+  margin-top: 35px;
+}
+
+.closebtn {
+  position: absolute;
+  top: 22;
+  left: 22;
+}
+
+.featured-button {
+  background-color: brown;
+  color: white;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+#featured-movie {
+  display: flex;
+  background-color: black;
+  justify-content: flex-end;
+  border-radius: 8px;
+}
+
+#featured-img {
+  border-radius: 8px;
+  margin-left: auto;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 70%;
+  padding: 2em;
+}
+
+#modal-black-background {
+  position: fixed;
+  background-color: #000000c7;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
 }

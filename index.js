@@ -78,16 +78,51 @@ function getMovieDetails(id) {
     // On ouvre le modal
     const modal = document.getElementById('modal')
     modal.setAttribute('class', 'modal visible')
+    const backgroundDiv = document.getElementById('modal-black-background')
+    backgroundDiv.setAttribute('class', 'visible')
+    // On ajoute les valeurs du film
     const title = document.getElementById('focus-title')
+    const img = document.getElementById('focus-img')
+    const genre = document.getElementById('focus-genre')
+    const date = document.getElementById('focus-date')
+    const rated = document.getElementById('focus-rated')
+    const score = document.getElementById('focus-score')
+    const director = document.getElementById('focus-director')
+    const actors = document.getElementById('focus-actors')
+    const duration = document.getElementById('focus-duration')
+    const country = document.getElementById('focus-country')
+    const results = document.getElementById('focus-results')
+    const resume = document.getElementById('focus-resume')
+
     title.innerText = movie.title
+    img.src = movie.image_url
+    genre.innerHTML = '<b>Genre.s :</b> ' + movie.genres.toString()
+    date.innerHTML = '<b>Date de sortie :</b> ' + movie.date_published
+    rated.innerHTML = '<b>Rated :</b> ' + movie.rated
+    score.innerHTML = '<b>Note IMDB :</b> ' + movie.imdb_score
+    director.innerHTML = '<b>Réalisateur.s :</b> ' + movie.directors.toString()
+    actors.innerHTML = '<b>Acteur.s :</b> ' + movie.actors.toString()
+    duration.innerHTML = '<b>Durée (minutes) :</b> ' + movie.duration
+    country.innerHTML = '<b>Pays :</b> ' + movie.countries.toString()
+    results.innerHTML =
+      '<b>Revenus box-office :</b> ' + movie.worldwide_gross_income
+    resume.innerHTML = '<b>Résumé :</b> ' + movie.long_description
   })
 }
 
 fetchBestMovie().then((movies) => {
   let bestMovie = movies[0]
-  let titre = document.getElementById('title')
-  //titre.innerText = bestMovie.title
-  //titre.setAttribute('movie-id', bestMovie.id)
+  let titre = document.getElementById('featured-title')
+  let img = document.getElementById('featured-img')
+  let btn = document.getElementById('featured-button')
+
+  titre.innerText = bestMovie.title
+  btn.setAttribute('movie-id', bestMovie.id)
+  img.src = bestMovie.image_url
+  fetchMovieDetails(bestMovie.id).then((movie_details) => {
+    let desc = document.getElementById('featured-desc')
+    desc.innerText = movie_details.description
+  })
 })
 
 fetchFollowing7BestMovies().then((movies) => {
@@ -129,14 +164,10 @@ leftBtnTop7.addEventListener('click', function (event) {
   event.preventDefault()
 })
 
-const modalBtn = document.getElementById('open-modal')
-modalBtn.addEventListener('click', function (event) {
-  const modal = document.getElementById('modal')
-  modal.setAttribute('class', 'modal visible')
-})
-
 const closeModalBtn = document.getElementById('close-modal')
 closeModalBtn.addEventListener('click', function (event) {
   const modal = document.getElementById('modal')
   modal.setAttribute('class', 'modal invisible')
+  const backgroundDiv = document.getElementById('modal-black-background')
+  backgroundDiv.setAttribute('class', 'invisible')
 })
