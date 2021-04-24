@@ -56,38 +56,18 @@ var sliders_data = [
   [fetchTopMovies('Animation'), 'animation'],
   [fetchTopMovies('Family'), 'family'],
 ]
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < sliders_data.length; i++) {
   sliders_data[i][0].then((movies) => {
+
     let customID = sliders_data[i][1]
 
-    let movie1 = document.getElementById('movie1-' + customID)
-    let movie2 = document.getElementById('movie2-' + customID)
-    let movie3 = document.getElementById('movie3-' + customID)
-    let movie4 = document.getElementById('movie4-' + customID)
-    let movie5 = document.getElementById('movie5-' + customID)
-    let movie6 = document.getElementById('movie6-' + customID)
-    let movie7 = document.getElementById('movie7-' + customID)
-    movie1.src = movies[0].image_url
-    movie1.alt = 'Cover picture of movie: ' + movies[0].title
-    movie2.src = movies[1].image_url
-    movie2.alt = 'Cover picture of movie: ' + movies[1].title
-    movie3.src = movies[2].image_url
-    movie3.alt = 'Cover picture of movie: ' + movies[2].title
-    movie4.src = movies[3].image_url
-    movie4.alt = 'Cover picture of movie: ' + movies[3].title
-    movie5.src = movies[4].image_url
-    movie5.alt = 'Cover picture of movie: ' + movies[4].title
-    movie6.src = movies[5].image_url
-    movie6.alt = 'Cover picture of movie: ' + movies[5].title
-    movie7.src = movies[6].image_url
-    movie7.alt = 'Cover picture of movie: ' + movies[6].title
-    movie1.setAttribute('movie-id', movies[0].id)
-    movie2.setAttribute('movie-id', movies[1].id)
-    movie3.setAttribute('movie-id', movies[2].id)
-    movie4.setAttribute('movie-id', movies[3].id)
-    movie5.setAttribute('movie-id', movies[4].id)
-    movie6.setAttribute('movie-id', movies[5].id)
-    movie7.setAttribute('movie-id', movies[6].id)
+    for (let j = 1; j <= 7; j++) {
+      let movie = document.getElementById('movie'+ j + '-' + customID)
+      movie.src = movies[j-1].image_url
+      movie.alt = 'Cover picture of movie: ' + movies[j-1].title
+      movie.setAttribute('movie-id', movies[j-1].id)
+    }
+   
   })
 }
 
@@ -148,14 +128,14 @@ for (let i = 0; i < 4; i++) {
   const leftBtn = document.getElementById('swipe-left-' + customID)
 
   rightBtn.addEventListener('click', function (event) {
+    event.preventDefault()
     const conent = document.getElementById(customID + '-scrollable')
     conent.scrollLeft += 300
-    event.preventDefault()
   })
 
   leftBtn.addEventListener('click', function (event) {
+    event.preventDefault()
     const conent = document.getElementById(customID + '-scrollable')
     conent.scrollLeft -= 300
-    event.preventDefault()
   })
 }
