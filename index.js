@@ -95,6 +95,8 @@ function getMovieDetails(id) {
     const results = document.getElementById('focus-results')
     const resume = document.getElementById('focus-resume')
 
+    console.log(movie.genres.toString())
+
     title.innerText = movie.title
     img.src = movie.image_url
     genre.innerHTML = '<b>Genre.s :</b> ' + movie.genres.toString()

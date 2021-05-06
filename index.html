@@ -1,10 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
   <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css" />
+    <title>OCMovies - Frontend with Vanilla JS</title>
   </head>
   <body>
     <header>
-      <img alt="logo" src="img/logo.png" width="auto" height="63" />
+      <img alt="logo" src="img/logo.png" height="63" />
       <a href="#"><span class="menu-item">Accueil</span></a>
       <a href="#action-movies"><span class="menu-item">Action</span></a>
       <a href="#animation-movies"><span class="menu-item">Animation</span></a>
@@ -18,75 +21,67 @@
           class="featured-button"
           id="featured-button"
           onclick="getMovieDetails(this.getAttribute('movie-id'))"
-          movie-id=""
         >
           En savoir plus
         </button>
       </div>
-      <img id="featured-img" src="#" width="auto" height="500px" />
+      <img id="featured-img" src="#" height="500" alt="featured image" />
     </section>
     <section id="top-movies">
       <h2>Films les mieux notés</h2>
       <div class="container">
         <div class="arrow">
           <button id="swipe-left-top7">
-            <img src="img/arrow-left.png" width="38" height="50" />
+            <img src="img/arrow-left.png" width="38" height="50" alt="fleche"/>
           </button>
         </div>
         <div class="scrollable-container" id="top7-scrollable">
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie1-top7"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie2-top7"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie3-top7"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie4-top7"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie5-top7"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie6-top7"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie7-top7"
+            src="empty.jpg"
+            alt="Movie cover"
           />
         </div>
         <div class="arrow">
           <button id="swipe-right-top7">
-            <img src="img/arrow-right.png" width="38" height="50" />
+            <img src="img/arrow-right.png" width="38" height="50" alt="fleche"/>
           </button>
         </div>
       </div>
@@ -96,63 +91,56 @@
       <div class="container">
         <div class="arrow">
           <button id="swipe-left-action">
-            <img src="img/arrow-left.png" width="38" height="50" />
+            <img src="img/arrow-left.png" width="38" height="50" alt="fleche"/>
           </button>
         </div>
         <div class="scrollable-container" id="action-scrollable">
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie1-action"
+            src="empty.jpg"
+            alt="Movie cover"
           />
-          <img
-            src=""
-            alt=""
+          <img  
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie2-action"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie3-action"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie4-action"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie5-action"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie6-action"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie7-action"
+            src="empty.jpg"
+            alt="Movie cover"
           />
         </div>
         <div class="arrow">
           <button id="swipe-right-action">
-            <img src="img/arrow-right.png" width="38" height="50" />
+            <img src="img/arrow-right.png" width="38" height="50" alt="fleche"/>
           </button>
         </div>
       </div>
@@ -162,63 +150,56 @@
       <div class="container">
         <div class="arrow">
           <button id="swipe-left-animation">
-            <img src="img/arrow-left.png" width="38" height="50" />
+            <img src="img/arrow-left.png" width="38" height="50" alt="fleche"/>
           </button>
         </div>
         <div class="scrollable-container" id="animation-scrollable">
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie1-animation"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie2-animation"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie3-animation"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie4-animation"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie5-animation"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie6-animation"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie7-animation"
+            src="empty.jpg"
+            alt="Movie cover"
           />
         </div>
         <div class="arrow">
           <button id="swipe-right-animation">
-            <img src="img/arrow-right.png" width="38" height="50" />
+            <img src="img/arrow-right.png" width="38" height="50" alt="fleche"/>
           </button>
         </div>
       </div>
@@ -228,63 +209,56 @@
       <div class="container">
         <div class="arrow">
           <button id="swipe-left-family">
-            <img src="img/arrow-left.png" width="38" height="50" />
+            <img src="img/arrow-left.png" width="38" height="50" alt="fleche" />
           </button>
         </div>
         <div class="scrollable-container" id="family-scrollable">
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie1-family"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie2-family"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie3-family"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie4-family"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie5-family"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie6-family"
+            src="empty.jpg"
+            alt="Movie cover"
           />
           <img
-            src=""
-            alt=""
             onclick="getMovieDetails(this.getAttribute('movie-id'))"
-            movie-id=""
             id="movie7-family"
+            src="empty.jpg"
+            alt="Movie cover"
           />
         </div>
         <div class="arrow">
           <button id="swipe-right-family">
-            <img src="img/arrow-right.png" width="38" height="50" />
+            <img src="img/arrow-right.png" width="38" height="50" alt="fleche"/>
           </button>
         </div>
       </div>
@@ -297,21 +271,17 @@
         width="45"
         height="45"
         id="close-modal"
+        alt="close btn"
       />
       <div class="modal-content">
         <img
-          src=""
+          src="empty.jpg"
           alt="cover picture"
-          width="auto"
           height="400"
           id="focus-img"
         />
         <div class="right-container">
           <h2 class="black margin" id="focus-title">Title</h2>
-          <dl>
-            <dt>titre</dt>
-            <dd id="focus-genre">info dynamique</dd>
-          </dl>
           <span id="focus-genre">Genre : <span></span></span>
           <span id="focus-date">Date de sortie</span>
           <span id="focus-rated">Rated</span>
@@ -326,6 +296,7 @@
       </div>
     </div>
     <script src="index.js"></script>
+    <footer>Just Stream It - Tous droits réservés - 2021.</footer>
+
   </body>
-  <footer>Just Stream It - Tous droits réservés - 2021.</footer>
 </html>
